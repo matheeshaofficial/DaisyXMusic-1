@@ -456,7 +456,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("🔄 **Processing**")
+    lel = await message.reply("⚙ **Processing**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -481,7 +481,7 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>Add me as admin of yor group first</b>",
+                        "<b>Add me as admin of yor group first🥺</b>",
                     )
                     return
 
